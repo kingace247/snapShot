@@ -23,7 +23,8 @@ class SignInViewController: UIViewController {
     @IBAction func SignUpTapped(_ sender: Any) {
         
         
-        FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+        FIRAuth.auth()?.signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
+            
             print("We tried to sign in ")
             if error != nil {
                 print("Hey we have an error:\(error)")
@@ -32,14 +33,16 @@ class SignInViewController: UIViewController {
                     print("we tried to create User")
                     
                     if error != nil {
-                       print("We have an error:\(error)")
+                        print("We have an error:\(error)")
                     }else{
-                        print("")
+                        print("Created User successfully!")
+                        self.performSegue(withIdentifier: "signInsegue", sender: nil)
                     }
                 })
                 
             }else{
                 print("Signed in successfully")
+                self.performSegue(withIdentifier: "signInsegue", sender: nil)
                 
             }
         })

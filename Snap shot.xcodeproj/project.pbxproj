@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2D5F87EE71EC2D6A49C76936 /* Pods_Snap_shot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2F9285F18BAD26B54589A9 /* Pods_Snap_shot.framework */; };
+		63D242B31EB7F83A001B85BC /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D242B21EB7F83A001B85BC /* SnapsViewController.swift */; };
+		63D242B51EB7FD1D001B85BC /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D242B41EB7FD1D001B85BC /* PictureViewController.swift */; };
+		63D242B71EB829D5001B85BC /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D242B61EB829D5001B85BC /* SelectUserViewController.swift */; };
 		63FBCE841EB66D7100586464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FBCE831EB66D7100586464 /* AppDelegate.swift */; };
 		63FBCE861EB66D7100586464 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FBCE851EB66D7100586464 /* SignInViewController.swift */; };
 		63FBCE891EB66D7100586464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FBCE871EB66D7100586464 /* Main.storyboard */; };
@@ -18,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63D242B11EB7F31B001B85BC /* Snap shot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Snap shot.entitlements"; sourceTree = "<group>"; };
+		63D242B21EB7F83A001B85BC /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		63D242B41EB7FD1D001B85BC /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		63D242B61EB829D5001B85BC /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		63FBCE801EB66D7100586464 /* Snap shot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Snap shot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FBCE831EB66D7100586464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63FBCE851EB66D7100586464 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -73,8 +80,12 @@
 		63FBCE821EB66D7100586464 /* Snap shot */ = {
 			isa = PBXGroup;
 			children = (
+				63D242B11EB7F31B001B85BC /* Snap shot.entitlements */,
 				63FBCE831EB66D7100586464 /* AppDelegate.swift */,
 				63FBCE851EB66D7100586464 /* SignInViewController.swift */,
+				63D242B21EB7F83A001B85BC /* SnapsViewController.swift */,
+				63D242B41EB7FD1D001B85BC /* PictureViewController.swift */,
+				63D242B61EB829D5001B85BC /* SelectUserViewController.swift */,
 				63FBCE871EB66D7100586464 /* Main.storyboard */,
 				63FBCE8D1EB66D7100586464 /* Assets.xcassets */,
 				63FBCE8F1EB66D7100586464 /* LaunchScreen.storyboard */,
@@ -131,6 +142,11 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = ZYSQ7XEWQJ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -219,9 +235,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D242B31EB7F83A001B85BC /* SnapsViewController.swift in Sources */,
 				63FBCE861EB66D7100586464 /* SignInViewController.swift in Sources */,
 				63FBCE8C1EB66D7100586464 /* Snap_shot.xcdatamodeld in Sources */,
+				63D242B71EB829D5001B85BC /* SelectUserViewController.swift in Sources */,
 				63FBCE841EB66D7100586464 /* AppDelegate.swift in Sources */,
+				63D242B51EB7FD1D001B85BC /* PictureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +366,7 @@
 			baseConfigurationReference = 8DC3D4873A3DAB5010812081 /* Pods-Snap shot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Snap shot/Snap shot.entitlements";
 				DEVELOPMENT_TEAM = ZYSQ7XEWQJ;
 				INFOPLIST_FILE = "Snap shot/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -361,6 +381,7 @@
 			baseConfigurationReference = B53FFF5DA189017B6CE331E9 /* Pods-Snap shot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Snap shot/Snap shot.entitlements";
 				DEVELOPMENT_TEAM = ZYSQ7XEWQJ;
 				INFOPLIST_FILE = "Snap shot/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
